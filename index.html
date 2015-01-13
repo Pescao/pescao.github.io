@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>InfoBox</title>
+    <script src="js/libs/jquery-2.1.1.min.js"></script>
+    <script src="js/infobox.js"></script>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div id="wrapper">
+
+</div>
+
+<div class="templates" style="display:none">
+    <script id="component-template" type="text/template">
+        <section class="component">
+            <div class="buttons-container">
+                <div class="btn prev">Prev</div>
+                <div class="btn next">Next</div>
+                <a class="btn find-store" target="_blank">Find a store</a>
+            </div>
+        </section>
+    </script>
+    <script id="item-template" type="text/template">
+        <div class="item-container show-details" style="display:none;">
+            <div class="img-container">
+                <img src="" alt=""/>
+            </div>
+            <div class="component-body">
+                <header></header>
+                <div class="content">
+                    <p class="desc"></p>
+                    <span class="show"></span>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+
+</body>
+
+</html>
+

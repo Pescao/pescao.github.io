@@ -1,0 +1,322 @@
+/* ============= RESET ============= */
+* {
+    box-sizing: border-box;
+}
+
+article, section, aside, nav, header, footer, figure, figcaption {
+    display: block;
+}
+
+html, button, input, select, textarea {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+body, figure, form {
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+ul, ol, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img, canvas {
+    border: 0;
+}
+
+button, input, select, textarea {
+    margin: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+    cursor: pointer;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+select[disabled],
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+select[disabled]{
+    background: #999;
+    opacity: 0.7;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0;
+    height: 13px;
+    width: 13px;
+    box-sizing: border-box;
+}
+
+/* One of the new types of inputs in HTML5 is search. */
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: block;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    background: #000;
+    color: #111;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* The user-select property text unselectable */
+.btn {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.component {
+    background: radial-gradient(#fff, #fefefe);
+    background: -webkit-radial-gradient(#fff, #fefefe);
+    box-shadow: 1px 1px 5px #666;
+    border-radius: 5px;
+    position: relative;
+    width: 312px;
+    height: 320px;
+    background-size: 100% 100%;
+}
+
+.item-container,
+.img-container {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+
+.item-container .desc {
+    overflow: hidden;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -ms-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+}
+
+.item-container.hide-details .desc,
+.item-container.show-details img {
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.item-container.show-details .desc,
+.item-container.hide-details .img-container {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.item-container .img-container {
+    overflow: hidden;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.item-container img {
+    max-width: 100%;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.item-container.show-details .img-container{
+    height: 200px;
+}
+.item-container.hide-details .img-container{
+    height: 0;
+}
+.item-container.show-details img {
+    opacity: 1;
+}
+.item-container.hide-details img{
+    opacity: 0;
+}
+
+.component header {
+    color: #FB4807;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.component .desc,
+.component .show {
+    font-size: 10px;
+    text-overflow: ellipsis;
+}
+.component .desc .note {
+    display: block;
+    color: #aaa;
+    margin-top: 5px;
+}
+.item-container.show-details .desc {
+    height: 25px;
+}
+.item-container.hide-details .desc {
+    height: 200px;
+}
+
+.item-container.show-details .show:before {
+    content: "show details";
+}
+.item-container.hide-details .show:before {
+    content: "hide details";
+}
+
+.component .show {
+    color: #FB4807;
+    border-bottom: 1px dotted white;
+    cursor: pointer;
+}
+.component .show:hover {
+    border-color: #FB4807;
+}
+
+.component-body {
+    padding: 10px;
+}
+
+.component .buttons-container {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.component .btn {
+    position: relative;
+    float: left;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.component .btn:first-child {
+    margin-left: 25px;
+}
+
+.component .btn,
+.component .btn:before,
+.component .btn:after {
+    border: 1px solid #ddd;
+    background-image: linear-gradient(#fff, #eee);
+    background-image: -webkit-linear-gradient(#fff, #eee);
+}
+
+.component .btn.find-store {
+    float: right;
+    margin-right: 25px;
+    color: #FB4807;
+}
+
+.component .btn:hover {
+    color: #eee;
+    text-shadow: 1px 1px 1px #000;
+    background-image: linear-gradient(#FD7E21, #FB4807);
+    background-image: -webkit-linear-gradient(#FD7E21, #FB4807);
+}
+
+.component .btn.prev:before,
+.component .btn.next:after,
+.component .btn.find-store:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: -1px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.component .btn.next,
+.component .btn.find-store,
+.component .btn.prev:before {
+    border-radius: 10px 0 0 10px;
+}
+
+.component .btn.next:after,
+.component .btn.find-store:after,
+.component .btn.prev {
+    border-radius: 0 10px 10px 0;
+}
+.component .btn.next:after,
+.component .btn.find-store:after {
+    right: -22px;
+}
+.component .btn.next:after {
+    background-image: url('../src/img/btn_ic_gray_right.png');
+}
+.component .btn.prev:before {
+    left: -22px;
+    background-image: url('../src/img/btn_ic_gray_left.png');
+}
+
+.component .btn.find-store:after {
+    background-image: url('../src/img/arrowSide.png');
+}
