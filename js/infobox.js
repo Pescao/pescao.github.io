@@ -2,7 +2,7 @@ $(document).on('ready', function () {
     var $wrap = $('#wrapper'),
         items;
 
-    $.getJSON( "/proj/src/info_box.json", function(data) {
+    $.getJSON( "../src/info_box.json", function(data) {
         items = data;
         infobox = new InfoBox({ items: items, renderTo: $wrap });
         appendControlsTo(infobox, $wrap);
